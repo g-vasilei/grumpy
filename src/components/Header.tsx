@@ -57,7 +57,7 @@ function Header() {
                   <Link href='/'>COLLECTION</Link>
                </li>
                <li onClick={() => setMenu((prevState) => !prevState)}>
-                  <Link href='/'>SUPPORT</Link> US
+                  <Link href='/'>CONTACT</Link> US
                </li>
             </ul>
             <ul className='hidden h-fit bg-transparent lg:flex  align-middle gap-10 font-bold text-slate-950'>
@@ -69,6 +69,9 @@ function Header() {
                </li>
                <li className='px-3 py-1'>
                   <Link href='/'>COLLECTION</Link>
+               </li>
+               <li className='px-3 py-1'>
+                  <Link href='/'>CONTACT</Link>
                </li>
                <li className='px-3 py-1 bg-main-color rounded-lg text-slate-100'>
                   <Link href='/'>SUPPORT US</Link>
