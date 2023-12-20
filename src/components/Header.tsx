@@ -51,10 +51,10 @@ function Header() {
                   <Link href='/'>HOME</Link>
                </li>
                <li onClick={() => setMenu((prevState) => !prevState)}>
-                  <Link href='/'>STORY</Link>
+                  <Link href='/story'>STORY</Link>
                </li>
                <li onClick={() => setMenu((prevState) => !prevState)}>
-                  <Link href='/'>COLLECTION</Link>
+                  <Link href='/projects'>PROJECTS</Link>
                </li>
                <li onClick={() => setMenu((prevState) => !prevState)}>
                   <Link href='/'>CONTACT</Link> US
@@ -65,10 +65,10 @@ function Header() {
                   <Link href='/'>HOME</Link>
                </li>
                <li className='px-3 py-1'>
-                  <Link href='/'>STORY</Link>
+                  <Link href='/story'>STORY</Link>
                </li>
                <li className='px-3 py-1'>
-                  <Link href='/'>COLLECTION</Link>
+                  <Link href='/projects'>PROJECTS</Link>
                </li>
                <li className='px-3 py-1'>
                   <Link href='/'>CONTACT</Link>

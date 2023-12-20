@@ -13,7 +13,7 @@ function Hero() {
             </h3>
             <p className='text-base font-semibold mt-8 lg:mt-16 text-slate-950'>
                You can find sad quotes about life. This is a unique project for us, grumpy people, to express our
-               feelings
+               feelings.
             </p>
             <Link className='px-3 py-1 bg-main-color rounded-lg text-slate-100 w-fit mt-5' href='/'>
                SUPPORT US

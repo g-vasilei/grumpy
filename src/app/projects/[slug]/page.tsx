@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
    // fetch data
    const { projects } = data
    const project = projects?.find((currentProject) => currentProject.slug === slug)
-   const imgUrl = `https://grumpy.gr/`
+   const imgUrl = `https://grumpy.gr/_next/static/media/`
 
    // optionally access and extend (rather than replace) parent metadata
    const previousImages = (await parent).openGraph?.images || []
@@ -59,7 +59,7 @@ function page({ params }: { params: { slug: string } }) {
 
    return (
       <>
-         <div className='pt-36 pb-36 w-full max-w-7xl m-auto grid grid-cols-1 sm:grid-cols-2'>
+         <div className='px-5 xl:px-0 pt-36 pb-36 w-full max-w-7xl m-auto grid grid-cols-1 sm:grid-cols-2'>
             <div className='m-w-full p-5 xl:p-0'>
                <Image src={project?.img!} priority alt='Project Image' />
             </div>
