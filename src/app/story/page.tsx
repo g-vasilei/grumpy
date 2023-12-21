@@ -21,7 +21,7 @@ function page() {
             George had an idea—a digital space where he could channel his emotions into something meaningful.
          </p>
          <p>
-            He created a website, naming it{' '}
+            He created a website, naming it
             <span className='text-main-color font-bold text-lg tracking-tight'>GRUMPY</span> Here, George poured his
             heart out, sharing his thoughts, poetry, and art inspired by the songs that spoke to his soul. The site
             became a haven for those who resonated with the same emotions, drawing in individuals seeking solace in
