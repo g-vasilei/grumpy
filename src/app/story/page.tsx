@@ -22,7 +22,7 @@ function page() {
          </p>
          <p>
             He created a website, naming it
-            <span className='text-main-color font-bold text-lg tracking-tight'>"GRUMPY"</span> Here, George poured his
+            <span className='text-main-color font-bold text-lg tracking-tight'>GRUMPY</span> Here, George poured his
             heart out, sharing his thoughts, poetry, and art inspired by the songs that spoke to his soul. The site
             became a haven for those who resonated with the same emotions, drawing in individuals seeking solace in
             their shared love for music that captured the essence of their sadness.
