@@ -5,9 +5,12 @@ import Logo from '../../public/imgs/logo/logo.png'
 import { RiMenu4Fill, RiCloseFill } from 'react-icons/ri'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 function Header() {
    const [menu, setMenu] = useState(false)
+
+   const pathname = usePathname()
 
    const [scroll, setScroll] = useState(false)
    const scrollThreshold = 200
@@ -61,17 +64,17 @@ function Header() {
                </li>
             </ul>
             <ul className='hidden h-fit bg-transparent lg:flex  align-middle gap-10 font-bold text-slate-950'>
-               <li className='px-3 py-1'>
+               <li className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${pathname === '/' && 'text-main-color'}`}>
                   <Link href='/'>HOME</Link>
                </li>
-               <li className='px-3 py-1'>
+               <li className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${pathname === '/story' && 'text-main-color'}`}>
                   <Link href='/story'>STORY</Link>
                </li>
-               <li className='px-3 py-1'>
+               <li className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${pathname === '/projects' && 'text-main-color'}`}>
                   <Link href='/projects'>PROJECTS</Link>
                </li>
-               <li className='px-3 py-1'>
-                  <Link href='/'>CONTACT</Link>
+               <li className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${pathname === '/contact' && 'text-main-color'}`}>
+                  <Link href='/contact'>CONTACT</Link>
                </li>
                <li className='px-3 py-1 bg-main-color rounded-lg text-slate-100'>
                   <Link href='/'>SUPPORT US</Link>
