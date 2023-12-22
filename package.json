@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "client-only": "^0.0.1",
     "next": "14.0.4",
     "next-share": "^0.27.0",
     "react": "^18",
@@ -16,6 +17,7 @@
     "react-icons": "^4.12.0"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.18",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
