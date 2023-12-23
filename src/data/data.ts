@@ -8,6 +8,7 @@ const data = {
          title: 'Happy to be Sad',
          description:
             'This is how grumpy.gr was created. This moto inspired the creator for this sad website where he can share his thoughts',
+         isPinned: true,
          slug: 'happy-to-be-sad',
          img: Q1,
          seoTitle: 'Project: Happy to be Sad | grumpy.gr',
@@ -16,6 +17,7 @@ const data = {
       {
          title: 'I know that I m not that important to you',
          description: 'Props to Lil Peep - Star Shopping.. Inspiration for a lot of content in this site',
+         isPinned: false,
          slug: 'not-that-important-to-you',
          img: Q2,
          seoTitle: 'I know that I m not that important to you | grumpy.gr',
@@ -25,6 +27,7 @@ const data = {
          title: 'Everybody so fake',
          description:
             'Everybody is so fake.. Sharing their life in social media just to show others the good life they are not living',
+         isPinned: false,
          slug: 'everybody-so-fake',
          img: Q3,
          seoTitle: 'Project: Everybody so fake | grumpy.gr',
@@ -34,6 +37,7 @@ const data = {
          title: 'Happy to be Sad',
          description:
             'This is how grumpy.gr was created. This moto inspired the creator for this sad website where he can share his thoughts',
+         isPinned: false,
          slug: 'happy-to-be-sad',
          img: Q1,
          seoTitle: 'Project: Happy to be Sad | grumpy.gr',
@@ -43,6 +47,7 @@ const data = {
          title: 'Happy to be Sad',
          description:
             'This is how grumpy.gr was created. This moto inspired the creator for this sad website where he can share his thoughts',
+         isPinned: false,
          slug: 'happy-to-be-sad',
          img: Q1,
          seoTitle: 'Project: Happy to be Sad | grumpy.gr',
@@ -52,6 +57,7 @@ const data = {
          title: 'Happy to be Sad',
          description:
             'This is how grumpy.gr was created. This moto inspired the creator for this sad website where he can share his thoughts',
+         isPinned: false,
          slug: 'happy-to-be-sad',
          img: Q1,
          seoTitle: 'Project: Happy to be Sad | grumpy.gr',

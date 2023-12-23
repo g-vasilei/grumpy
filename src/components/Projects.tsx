@@ -8,6 +8,7 @@ import { StaticImageData } from 'next/image';
 interface Projects {
   title: string;
   description: string;
+  isPinned: boolean;
   slug: string;
   img: StaticImageData;
   seoTitle: string;

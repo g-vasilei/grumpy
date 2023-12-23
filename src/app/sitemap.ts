@@ -20,5 +20,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
          changeFrequency: 'weekly',
          priority: 0.5,
       },
+      {
+         url: 'https://grumpy.gr/cookies',
+         lastModified: new Date(),
+         changeFrequency: 'weekly',
+         priority: 0.5,
+      },
+      {
+         url: 'https://grumpy.gr/support-us',
+         lastModified: new Date(),
+         changeFrequency: 'weekly',
+         priority: 0.7,
+      },
+      {
+         url: 'https://grumpy.gr/story',
+         lastModified: new Date(),
+         changeFrequency: 'weekly',
+         priority: 0.5,
+      },
    ]
 }
