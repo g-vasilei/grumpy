@@ -42,7 +42,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
    const id = process.env.GA_MEASUREMENT_ID
    return (
       <html lang='en'>
-         <link rel='icon' href='/bear.ico' sizes='any' />
          <GoogleAnalytics GA_MEASUREMENT_ID={id!} />
          <body className={inter.className}>
             <Header />
