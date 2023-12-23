@@ -46,8 +46,8 @@ function Header() {
             <ul
                className={
                   menu
-                     ? 'fixed h-screen w-1/2 left-0 top-0 flex flex-col align-middle justify-center gap-10 px-5 transition-all ease-in-out duration-500 backdrop-blur-sm bg-white/20 lg:hidden text-main-color font-bold'
-                     : 'fixed h-screen w-1/2 -left-full flex flex-col align-middle justify-center gap-10 px-5 transition-all ease-in-out duration-500 backdrop-blur-sm bg-white/20 top-0 lg:hidden'
+                     ? 'fixed h-screen w-1/2 left-0 top-0 flex flex-col align-middle justify-center gap-10 px-5 transition-all ease-in-out duration-500 backdrop-blur-sm bg-white/50 lg:hidden text-main-color font-bold'
+                     : 'fixed h-screen w-1/2 -left-full flex flex-col align-middle justify-center gap-10 px-5 transition-all ease-in-out duration-500 backdrop-blur-sm bg-white/50 top-0 lg:hidden'
                }
             >
                <li onClick={() => setMenu((prevState) => !prevState)}>
@@ -64,16 +64,32 @@ function Header() {
                </li>
             </ul>
             <ul className='hidden h-fit bg-transparent lg:flex  align-middle gap-10 font-bold text-slate-950'>
-               <li className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${pathname === '/' && 'text-main-color'}`}>
+               <li
+                  className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${
+                     pathname === '/' && 'text-main-color'
+                  }`}
+               >
                   <Link href='/'>HOME</Link>
                </li>
-               <li className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${pathname === '/story' && 'text-main-color'}`}>
+               <li
+                  className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${
+                     pathname === '/story' && 'text-main-color'
+                  }`}
+               >
                   <Link href='/story'>STORY</Link>
                </li>
-               <li className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${pathname === '/projects' && 'text-main-color'}`}>
+               <li
+                  className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${
+                     pathname === '/projects' && 'text-main-color'
+                  }`}
+               >
                   <Link href='/projects'>PROJECTS</Link>
                </li>
-               <li className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${pathname === '/contact' && 'text-main-color'}`}>
+               <li
+                  className={`px-3 py-1 hover:text-main-color transition-colors ease-in duration-300 ${
+                     pathname === '/contact' && 'text-main-color'
+                  }`}
+               >
                   <Link href='/contact'>CONTACT</Link>
                </li>
                <li className='px-3 py-1 bg-main-color rounded-lg text-slate-100'>
