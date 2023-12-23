@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-paginate": "^7.1.4",
     "client-only": "^0.0.1",
     "next": "14.0.4",
     "next-share": "^0.27.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "react-paginate": "^8.2.0"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@types/gtag.js": "^0.0.18",
     "@types/node": "^20",
     "@types/react": "^18",
