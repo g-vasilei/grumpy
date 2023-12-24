@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
    // fetch data
    const { projects } = data
    const project = projects?.find((currentProject) => currentProject.slug === slug)
-   const imgUrl = `https://grumpy.gr/imgs/quotes/quotes-1.png`
+   const imgUrl = `https://grumpy.gr/imgs/quotes/quotes-${project?.id}.png`
 
    // optionally access and extend (rather than replace) parent metadata
    const previousImages = (await parent).openGraph?.images || []

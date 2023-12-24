@@ -7,6 +7,7 @@ import { StaticImageData } from 'next/image'
 import ReactPaginate from 'react-paginate'
 
 interface Projects {
+   id: number
    title: string
    description: string
    isPinned: boolean
