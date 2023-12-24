@@ -1,10 +1,11 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, FormEventHandler } from 'react'
 import Image from 'next/image'
 import Sad from '../../public/imgs/icons/sad-quote.png'
 import toast from 'react-hot-toast'
 import emailjs from '@emailjs/browser'
+import Link from 'next/link'
 
 function QuotesForm() {
    const [form, setForm] = useState({
@@ -22,7 +23,7 @@ function QuotesForm() {
    const handleForm = (e: React.ChangeEvent<HTMLInputElement>) => {
       setForm((prevState) => ({
          ...prevState,
-         [e.target.id]: e.target.value,
+         [e.target.name]: e.target.value,
       }))
    }
 
@@ -30,19 +31,23 @@ function QuotesForm() {
    const template = process.env.YOUR_TEMPLATE_ID
    const key = process.env.YOUR_PUBLIC_KEY
 
-   const sendEmail = (e: FormEventHandler<HTMLFormElement>) => {
+   const sendEmail: React.FormEventHandler<HTMLFormElement> = (e) => {
       e.preventDefault()
-
+      const { name, quote, description } = form
       const templateParams = {
-         name: form.name,
-         quote: form.quote,
-         description: form.description,
+         name,
+         quote,
+         description,
       }
 
       emailjs.send('service_vgwo5eq', 'template_t5pjboc', templateParams, 'eG8BapSqYw_BDMAfK').then(
          (response) => {
             toast.success('We got your email')
-            setForm({ ...initialState })
+            setForm(() => ({
+               name: '',
+               quote: '',
+               description: '',
+            }))
          },
          (err) => {
             toast.error('Something went wrong :(')
@@ -58,11 +63,18 @@ function QuotesForm() {
                   You can send us your Quotes. Just fill the form fields and as soon as we get your message we ll create
                   an image with your Quote with @Name in projects description.
                </p>
+               <p className='text-base opacity-70 mt-5'>
+                  *by submitting your quote you agry to{' '}
+                  <Link className='text-slate-800' href='/terms'>
+                     terms of use
+                  </Link>
+               </p>
             </div>
             <form action='' className='mt-10 sm:mt-0 flex flex-col sm:pl-12 gap-6 z-[2]' onSubmit={sendEmail}>
                <input
                   type='text'
                   name='name'
+                  value={form.name}
                   autoComplete='off'
                   autoCorrect='off'
                   autoCapitalize='off'
@@ -74,6 +86,7 @@ function QuotesForm() {
                <input
                   type='text'
                   name='quote'
+                  value={form.quote}
                   autoComplete='off'
                   autoCorrect='off'
                   autoCapitalize='off'
@@ -85,6 +98,7 @@ function QuotesForm() {
                <input
                   type='text'
                   name='description'
+                  value={form.description}
                   autoComplete='off'
                   autoCorrect='off'
                   autoCapitalize='off'
@@ -93,7 +107,9 @@ function QuotesForm() {
                   className='w-full backdrop-blur-sm bg-white/20 px-4 py-2 rounded-lg text-slate-950 placeholder-slate-500'
                   onChange={handleForm}
                />
-               <button type='submit'>Submit</button>
+               <button type='submit' className='font-bold bg-white text-main-color py-2 rounded-xl'>
+                  Submit
+               </button>
             </form>
             <div className='absolute bottom-[110px] sm:bottom-0 sm:top-[35px] sm:right-[140px]'>
                <Image src={Sad} alt='sad emoji' />
