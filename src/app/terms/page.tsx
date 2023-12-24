@@ -77,7 +77,7 @@ function page() {
          <div className='mt-16'>
             <h3 className='text-2xl font-bold'>8. Contact</h3>
             <p className='mt-4'>
-               If you have any questions or concerns about these Terms, please contact us at{' '}
+               If you have any questions or concerns about these Terms, please contact us at
                <Link href='/contact' className='text-main-color font-bold'>
                   Contact Us
                </Link>

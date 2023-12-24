@@ -91,7 +91,7 @@ function terms() {
             <h3 className='text-2xl font-bold'>8. Contact</h3>
             <p className='mt-4'>
                If you have any questions about this Privacy Policy, the practices of this website, or your dealings with
-               this site, please contact us at{' '}
+               this site, please contact us at
                <Link href='/contact' className='text-main-color font-bold'>
                   Contact Us
                </Link>
