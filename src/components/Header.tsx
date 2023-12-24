@@ -34,7 +34,9 @@ function Header() {
                </Link>
             </h1>
             <div className='flex items-center gap-5 lg:invisible'>
-               <div className='px-3 py-1 bg-main-color rounded-lg'>SUPPORT US</div>
+               <div className='px-3 py-1 bg-main-color rounded-lg'>
+                  <Link href='/support-us'>SUPPORT US</Link>
+               </div>
                <div onClick={() => setMenu((prevState) => !prevState)}>
                   {menu ? (
                      <RiCloseFill size={28} className='text-main-color' />
@@ -60,7 +62,7 @@ function Header() {
                   <Link href='/projects'>PROJECTS</Link>
                </li>
                <li onClick={() => setMenu((prevState) => !prevState)}>
-                  <Link href='/'>CONTACT</Link> US
+                  <Link href='/contact'>CONTACT</Link> US
                </li>
             </ul>
             <ul className='hidden h-fit bg-transparent lg:flex  align-middle gap-10 font-bold text-slate-950'>
@@ -93,7 +95,7 @@ function Header() {
                   <Link href='/contact'>CONTACT</Link>
                </li>
                <li className='px-3 py-1 bg-main-color rounded-lg text-slate-100'>
-                  <Link href='/'>SUPPORT US</Link>
+                  <Link href='/support-us'>SUPPORT US</Link>
                </li>
             </ul>
          </div>
