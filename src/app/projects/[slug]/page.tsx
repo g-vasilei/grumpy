@@ -58,11 +58,11 @@ function page({ params }: { params: { slug: string } }) {
 
    return (
       <>
-         <div className='px-5 xl:px-0 pt-36 pb-36 w-full max-w-7xl m-auto grid grid-cols-1 sm:grid-cols-2'>
+         <div className='px-5 xl:px-0 pt-36 pb-36 w-full max-w-7xl m-auto grid grid-cols-1 md:grid-cols-2'>
             <div className='m-w-full p-5 xl:p-0'>
                <Image src={project?.img!} priority alt='Project Image' />
             </div>
-            <div className='p-5 xl:p-12 text-slate-950 mt-10'>
+            <div className='p-5 xl:p-12 text-slate-950 mt-10 md:mt-0'>
                <h2 className='text-5xl font-extrabold'>{project?.title}</h2>
                <p className='text-lg mt-5 font-medium'>{project?.description}</p>
                <ShareButtons slug={slug} />
