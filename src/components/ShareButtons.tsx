@@ -51,10 +51,10 @@ function ShareButtons({ slug }: { slug: string }) {
          >
             <WhatsappIcon size={32} round />
          </WhatsappShareButton>
-         <FacebookMessengerShareButton url={'https://grumpy.gr/projects/${slug}'} appId={''}>
+         <FacebookMessengerShareButton url={`https://grumpy.gr/projects/${slug}`} appId={''}>
             <FacebookMessengerIcon size={32} round />
          </FacebookMessengerShareButton>
-         <EmailShareButton url={'https://grumpy.gr/projects/${slug}'} subject={'Next Share'} body='body'>
+         <EmailShareButton url={`https://grumpy.gr/projects/${slug}`} subject={'Next Share'} body='body'>
             <EmailIcon size={32} round />
          </EmailShareButton>
       </div>
