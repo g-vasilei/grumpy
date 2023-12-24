@@ -28,7 +28,7 @@ function terms() {
                <ul className='mt-5'>
                   <li className='list-disc list-inside'>
                      <span className='font-bold'>Improving User Experience:</span> Information collected helps us
-                     personalize user experience, respond to inquiries, and enhance our website's content.
+                     personalize user experience, respond to inquiries, and enhance our websites content.
                   </li>
                   <li className='list-disc list-inside'>
                      <span className='font-bold'>Communication:</span> We may use your email address to respond to
@@ -51,7 +51,7 @@ function terms() {
             <h3 className='text-2xl font-bold'>4. Sharing Your Information</h3>
             <p className='mt-4'>
                <li className='list-disc list-inside'>
-                  <span className='font-bold'>Third Parties:</span> We do not sell, trade, or rent users' personal
+                  <span className='font-bold'>Third Parties:</span> We do not sell, trade, or rent users personal
                   information to third parties. However, we may share generic aggregated demographic information not
                   linked to any personal identification information regarding visitors and users with our business
                   partners, trusted affiliates, and advertisers.

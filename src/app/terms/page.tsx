@@ -8,8 +8,8 @@ function page() {
          <div className='mt-16'>
             <h3 className='text-2xl font-bold'>1. Use of Images</h3>
             <p className='mt-4'>
-               The images containing sad quotes ("Images") displayed on this Website are the property of Grumpy.gr. You
-               are permitted to:
+               The images containing sad quotes displayed on this Website are the property of Grumpy.gr. You are
+               permitted to:
                <ul className='mt-5'>
                   <li className='list-disc list-inside'>
                      <span className='font-bold'>Share:</span> You may share the Images via social media, personal
