@@ -21,32 +21,32 @@ function ShareButtons({ slug }: { slug: string }) {
             <FacebookIcon size={32} round />
          </FacebookShareButton>
          <TwitterShareButton
-            url={'https://grumpy.gr/projects/${slug}'}
-            title={'Sad and unmotivational quotes | grumpy.gr'}
+            url={`https://grumpy.gr/projects/${slug}`}
+            title={`Sad and unmotivational quotes | grumpy.gr`}
          >
             <TwitterIcon size={32} round />
          </TwitterShareButton>
          <RedditShareButton
-            url={'https://grumpy.gr/projects/${slug}'}
-            title={'Sad and unmotivational quotes | grumpy.gr'}
+            url={`https://grumpy.gr/projects/${slug}`}
+            title={`Sad and unmotivational quotes | grumpy.gr`}
          >
             <RedditIcon size={32} round />
          </RedditShareButton>
          <TelegramShareButton
-            url={'https://grumpy.gr/projects/${slug}'}
-            title={'Sad and unmotivational quotes | grumpy.gr'}
+            url={`https://grumpy.gr/projects/${slug}`}
+            title={`Sad and unmotivational quotes | grumpy.gr`}
          >
             <TelegramIcon size={32} round />
          </TelegramShareButton>
          <ViberShareButton
-            url={'https://grumpy.gr/projects/${slug}'}
-            title={'Sad and unmotivational quotes | grumpy.gr'}
+            url={`https://grumpy.gr/projects/${slug}`}
+            title={`Sad and unmotivational quotes | grumpy.gr`}
          >
             <ViberIcon size={32} round />
          </ViberShareButton>
          <WhatsappShareButton
-            url={'https://grumpy.gr/projects/${slug}'}
-            title={'Sad and unmotivational quotes | grumpy.gr'}
+            url={`https://grumpy.gr/projects/${slug}`}
+            title={`Sad and unmotivational quotes | grumpy.gr`}
             separator=':: '
          >
             <WhatsappIcon size={32} round />
