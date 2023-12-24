@@ -15,24 +15,23 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
    // fetch data
    const { projects } = data
    const project = projects?.find((currentProject) => currentProject.slug === slug)
-   const imgUrl = `https://grumpy.gr/_next/static/media/`
+   const imgUrl = `https://grumpy.gr/imgs/quotes/quotes-1.png`
 
    // optionally access and extend (rather than replace) parent metadata
    const previousImages = (await parent).openGraph?.images || []
 
    return {
-      title: project?.title,
-      description: project?.description,
+      title: project?.seoTitle,
+      description: project?.seoDescription,
       alternates: {
          canonical: `https://grumpy.gr/projects/${slug}`,
-         //  languages: {
-         //     'en-US': '/en-US',
-         //     'el-GR': '/el-GR',
-         //  },
+         languages: {
+            'en-US': '/en-US',
+         },
       },
       openGraph: {
-         title: project?.title,
-         description: project?.description,
+         title: project?.seoTitle,
+         description: project?.seoDescription,
          type: 'article',
          url: `https://grumpy.gr/projects/${slug}`,
          images: [
@@ -43,8 +42,8 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
       },
       twitter: {
          card: 'summary_large_image',
-         title: project?.title,
-         description: project?.description,
+         title: project?.seoTitle,
+         description: project?.seoDescription,
          images: [imgUrl],
       },
    }
