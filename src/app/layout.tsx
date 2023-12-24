@@ -5,15 +5,16 @@ import Footer from '../components/Footer'
 import dynamic from 'next/dynamic'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 import CookieBanner from '../components/CookieBanner'
+import { Toaster } from 'react-hot-toast'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
    title: 'grumpy.gr',
    description: 'Sad and unmotivational quotes',
-   keywords: ['Βέροια', 'Ηλεκτρολόγος', 'Ηλεκτρονικός', 'World Οικονομικά'],
+   keywords: ['sad', 'unmotivational', 'sad quotes', 'quotes', 'happy to be sad', 'create image with your sad quote'],
    alternates: {
-      canonical: `https://grumpy.gr/projects/`,
+      canonical: `https://grumpy.gr/imgs/quotes/quotes-1.png`,
    },
    openGraph: {
       title: 'grumpy.gr',
@@ -22,7 +23,7 @@ export const metadata = {
       url: `https://grumpy.gr/`,
       images: [
          {
-            url: 'https://www.grumpy.gr/_next/static/media/logo-4.768153dc.svg',
+            url: 'https://grumpy.gr/imgs/quotes/quotes-1.png',
          },
       ],
    },
@@ -30,7 +31,7 @@ export const metadata = {
       card: 'summary_large_image',
       title: 'grumpy.gr',
       description: 'Sad and unmotivational quotes',
-      images: 'https://www.grumpy.gr/_next/static/media/logo-4.768153dc.svg',
+      images: 'https://grumpy.gr/imgs/quotes/quotes-1.png',
    },
 }
 
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main className='bg-[#F1F1F1]'>{children}</main>
             <Footer />
             <CookieBanner />
+            <Toaster position='top-center' />
          </body>
       </html>
    )
