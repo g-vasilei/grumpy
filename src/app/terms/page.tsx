@@ -49,7 +49,7 @@ function page() {
          <div className='mt-16'>
             <h3 className='text-2xl font-bold'>4. Disclaimer</h3>
             <p className='mt-4'>
-               The Images on this Website are provided "as is" without any warranties, express or implied. We do not
+               The Images on this Website are provided as is without any warranties, express or implied. We do not
                guarantee the accuracy, reliability, or suitability of the Images for any purpose.
             </p>
          </div>
