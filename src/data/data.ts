@@ -8,7 +8,7 @@ const data = {
          id: 1,
          title: 'Happy to be Sad',
          description:
-            'This is how grumpy.gr was created. This moto inspired the creator for this sad website where he can share his thoughts',
+            'Grumpy.gr was born from a powerful inspiration—the desire to embrace and share the raw, authentic emotions of life. This motto ignited the creators vision, giving rise to a platform where poignant thoughts find a home. Fuelled by this inspiration, Grumpy.gr stands as a testament to the beauty found in expressing unfiltered emotions, crafting a space to share heartfelt reflections and connect through the depth of human experience',
          isPinned: true,
          slug: 'happy-to-be-sad',
          img: Q1,
@@ -18,7 +18,8 @@ const data = {
       {
          id: 2,
          title: 'I know that I m not that important to you',
-         description: 'Props to Lil Peep - Star Shopping.. Inspiration for a lot of content in this site',
+         description:
+            'Lil Peeps Star Shopping serves as a beacon of inspiration for the diverse content on this platform. Its more than a song; its a catalyst that fuels creativity and depth. From its profound lyrics to its emotional resonance, this track has woven itself into the fabric of this site, inspiring a myriad of content that echoes the raw sentiments and introspective themes encapsulated in Lil Peeps music. It stands as a tribute to the impact of art on expression, shaping a space where profound inspiration converges with heartfelt narratives.',
          isPinned: false,
          slug: 'not-that-important-to-you',
          img: Q2,
@@ -29,7 +30,7 @@ const data = {
          id: 3,
          title: 'Everybody so fake',
          description:
-            'Everybody is so fake.. Sharing their life in social media just to show others the good life they are not living',
+            'Amidst the facade of social media, where many project a curated reality, the sentiment Everybody is so fake resonates deeply. This insight into the paradox of portraying an idealized life while masking the genuine human experience has shaped the essence of this platform. Its a space crafted to challenge this societal norm, inviting authentic conversations and unfiltered expressions. Rooted in the contrast between projected perfection and hidden realities, this site stands as a haven for genuine connection and honest narratives, offering solace to those seeking depth beyond the superficial.',
          isPinned: false,
          slug: 'everybody-so-fake',
          img: Q3,

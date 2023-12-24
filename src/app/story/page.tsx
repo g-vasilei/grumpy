@@ -3,7 +3,8 @@ import React from 'react'
 function page() {
    return (
       <div className='px-5 xl:px-0 pt-36 pb-36 w-full max-w-7xl m-auto text-slate-950 font-medium tracking-wide'>
-         <p className='mb-10'>
+         <h2 className='w-fll text-center text-3xl font-extrabold'>Our Story</h2>
+         <p className='mb-10 mt-12'>
             In a picturesque town in Greece, there resided a boy named George. He was a quiet soul, navigating a world
             that often felt overwhelming. Unlike most kids his age, George found solace in the haunting melodies and
             melancholic lyrics of Lil Peep s songs. The raw emotion and honesty in the music resonated deeply with his
@@ -22,7 +23,7 @@ function page() {
          </p>
          <p>
             He created a website, naming it
-            <span className='text-main-color font-bold text-lg tracking-tight'>GRUMPY</span> Here, George poured his
+            <span className='text-main-color font-bold text-lg tracking-tight'> GRUMPY.</span> Here, George poured his
             heart out, sharing his thoughts, poetry, and art inspired by the songs that spoke to his soul. The site
             became a haven for those who resonated with the same emotions, drawing in individuals seeking solace in
             their shared love for music that captured the essence of their sadness.
