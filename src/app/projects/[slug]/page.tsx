@@ -66,6 +66,22 @@ function page({ params }: { params: { slug: string } }) {
                <h2 className='text-5xl font-extrabold'>{project?.title}</h2>
                <p className='text-lg mt-5 font-medium'>{project?.description}</p>
                <ShareButtons slug={slug} />
+               <div className='mt-12 flex flex-col gap-5'>
+                  <a
+                     href={`/imgs/quotes/quotes-${project?.id}.png`}
+                     download
+                     className='border-2 border-main-color rounded-xl px-3 py-2 text-xl font-semibold w-full  text-center'
+                  >
+                     Download Image
+                  </a>
+                  <a
+                     href={`/imgs/story/i-${project?.id}.png`}
+                     download
+                     className='border-2 bg-main-color text-white rounded-xl px-[18px] py-[10px] text-xl font-semibold text-center'
+                  >
+                     Download Insta Story
+                  </a>
+               </div>
             </div>
          </div>
       </>
