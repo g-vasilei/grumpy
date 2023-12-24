@@ -73,7 +73,7 @@ function Projects({ projects }: { projects: Projects[] }) {
                we could not find a project with this title 😢
             </div>
          )}
-         {filteredProjects.length > 0 && (
+         {filteredProjects.length > 8 && (
             <ReactPaginate
                breakLabel='...'
                nextLabel='>'
