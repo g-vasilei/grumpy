@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { StaticImageData } from 'next/image'
 import ReactPaginate from 'react-paginate'
+import { GiSafetyPin } from 'react-icons/gi'
 
 interface Projects {
    id: number
@@ -60,8 +61,13 @@ function Projects({ projects }: { projects: Projects[] }) {
                {currentItems?.map((project: Projects, index: number) => (
                   <Link href={`/projects/${project.slug}`} key={index}>
                      <div className='card'>
-                        <div className='max-w-[400px]'>
-                           <Image src={project.img} alt={project.title} className='rounded-lg' />
+                        <div className='max-w-[400px] relative'>
+                           <Image src={project?.img} alt={project?.title} className='rounded-lg' />
+                           {project.isPinned && (
+                              <span className='absolute top-4 right-4'>
+                                 <GiSafetyPin fill='#ffffff' size={18} />
+                              </span>
+                           )}
                         </div>
                         <div className='text-slate-950 font-semibold text-lg mt-5 line-clamp-2'>{project.title}</div>
                      </div>
