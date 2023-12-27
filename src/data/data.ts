@@ -58,7 +58,7 @@ const data = {
             'Delve into the profound intricacies of an emotional labyrinth, where the inexplicable allure of pain becomes a captivating journey. Uncover the complex tapestry of human experience, where emotions intertwine, inviting introspection into our deepest vulnerabilities and resilience.',
          isPinned: false,
          slug: 'addicted-to-emotional-pain',
-         img: Q4,
+         img: Q5,
          seoTitle: 'Addicted to emotional pain | grumpy.gr',
          seoDescription:
             'Explore the captivating allure of emotional intensity, where an unspoken addiction intertwines with the depths of human experience.',
