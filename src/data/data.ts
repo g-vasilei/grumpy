@@ -2,6 +2,7 @@ import Q1 from '../../public/imgs/quotes/quotes-1.png'
 import Q2 from '../../public/imgs/quotes/quotes-2.png'
 import Q3 from '../../public/imgs/quotes/quotes-3.png'
 import Q4 from '../../public/imgs/quotes/quotes-4.png'
+import Q5 from '../../public/imgs/quotes/quotes-5.png'
 
 const data = {
    projects: [
@@ -49,6 +50,18 @@ const data = {
          seoTitle: 'Pain echoes through silent tears | grumpy.gr',
          seoDescription:
             'Delve into Pain Echoes in Silent Tears, expressing profound emotional turmoil and unspoken agony. This phrase captures intense inner distress symbolized by weighty, silent tears, resonating with the haunting nature of hidden pain and underscoring impactful inner struggles.',
+      },
+      {
+         id: 4,
+         title: 'Addicted to emotional pain',
+         description:
+            'Delve into the profound intricacies of an emotional labyrinth, where the inexplicable allure of pain becomes a captivating journey. Uncover the complex tapestry of human experience, where emotions intertwine, inviting introspection into our deepest vulnerabilities and resilience.',
+         isPinned: false,
+         slug: 'addicted-to-emotional-pain',
+         img: Q4,
+         seoTitle: 'Addicted to emotional pain | grumpy.gr',
+         seoDescription:
+            'Explore the captivating allure of emotional intensity, where an unspoken addiction intertwines with the depths of human experience.',
       },
    ],
 }
