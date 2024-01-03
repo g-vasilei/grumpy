@@ -48,8 +48,8 @@ function Header() {
             <ul
                className={
                   menu
-                     ? 'fixed h-screen w-1/2 left-0 top-0 flex flex-col align-middle justify-center gap-10 px-5 transition-all ease-in-out duration-500 backdrop-blur-sm bg-white/50 lg:hidden text-main-color font-bold'
-                     : 'fixed h-screen w-1/2 -left-full flex flex-col align-middle justify-center gap-10 px-5 transition-all ease-in-out duration-500 backdrop-blur-sm bg-white/50 top-0 lg:hidden'
+                     ? 'fixed h-screen w-1/2 left-0 top-0 flex flex-col align-middle justify-center gap-10 px-5 transition-all ease-in-out duration-500 backdrop-blur-sm bg-white/50 lg:hidden text-main-color font-bold z-[20]'
+                     : 'fixed h-screen w-1/2 -left-full flex flex-col align-middle justify-center gap-10 px-5 transition-all ease-in-out duration-500 backdrop-blur-sm bg-white/50 top-0 lg:hidden z-[20]'
                }
             >
                <li onClick={() => setMenu((prevState) => !prevState)}>

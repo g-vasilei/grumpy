@@ -33,7 +33,7 @@ export default function CookieBanner() {
                       ${
                          cookieConsent != null ? 'hidden' : 'flex'
                       } px-3 md:px-4 py-3 justify-between items-center flex-col sm:flex-row gap-4  
-                       bg-neutral-50 rounded-lg shadow `}
+                       bg-neutral-50 rounded-lg shadow z-10`}
       >
          <div className='text-center text-slate-950'>
             <Link href='/info/cookies'>
