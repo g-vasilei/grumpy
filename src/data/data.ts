@@ -3,6 +3,7 @@ import Q2 from '../../public/imgs/quotes/quotes-2.png'
 import Q3 from '../../public/imgs/quotes/quotes-3.png'
 import Q4 from '../../public/imgs/quotes/quotes-4.png'
 import Q5 from '../../public/imgs/quotes/quotes-5.png'
+import Q6 from '../../public/imgs/quotes/quotes-6.png'
 
 const data = {
    projects: [
@@ -62,6 +63,18 @@ const data = {
          seoTitle: 'Addicted to emotional pain | grumpy.gr',
          seoDescription:
             'Explore the captivating allure of emotional intensity, where an unspoken addiction intertwines with the depths of human experience.',
+      },
+      {
+         id: 6,
+         title: 'I cannot relate',
+         description:
+            'Embrace the unfamiliar and uncharted territories within the phrase I cannot relate. Its a portal to discovery, a canvas waiting for your unique brushstrokes of understanding. Its an opportunity to connect, empathize, and delve into experiences beyond our immediate grasp. In its mystery lies the beauty of exploration and the chance to expand our horizons, fostering a deeper appreciation for diverse perspectives and the rich tapestry of human stories.',
+         isPinned: false,
+         slug: 'i-cannot-relate',
+         img: Q6,
+         seoTitle: 'I cannot relate | grumpy.gr',
+         seoDescription:
+            'Explore uncharted realms with I cannot relate, an avenue to understanding diverse viewpoints. Embrace this phrase as an opportunity for empathy, fostering connections and broadening horizons. Uncover the beauty of exploration, enriching our understanding of varied perspectives and the depth of human stories.',
       },
    ],
 }
