@@ -4,6 +4,7 @@ import Q3 from '../../public/imgs/quotes/quotes-3.png'
 import Q4 from '../../public/imgs/quotes/quotes-4.png'
 import Q5 from '../../public/imgs/quotes/quotes-5.png'
 import Q6 from '../../public/imgs/quotes/quotes-6.png'
+import Q7 from '../../public/imgs/quotes/quotes-7.png'
 
 const data = {
    projects: [
@@ -75,6 +76,19 @@ const data = {
          seoTitle: 'I cannot relate | grumpy.gr',
          seoDescription:
             'Explore uncharted realms with I cannot relate, an avenue to understanding diverse viewpoints. Embrace this phrase as an opportunity for empathy, fostering connections and broadening horizons. Uncover the beauty of exploration, enriching our understanding of varied perspectives and the depth of human stories.',
+      },
+
+      {
+         id: 7,
+         title: 'She can see the pain',
+         description:
+            'In this evocative quote the words She can see the pain encapsulate a profound and empathetic observation. The sentence suggests a heightened sensitivity and emotional awareness within the subject, highlighting her ability to perceive and understand the struggles, hardships, or emotional turmoil experienced by others. Whether through keen intuition, deep empathy, or a perceptive gaze, the quote implies that this woman possesses a unique capacity to recognize and connect with the emotional suffering of those around her. It conveys a sense of compassion and insight, painting a vivid picture of someone who not only witnesses the visible aspects of life but also delves into the hidden realms of human emotion. The quote hints at the power of empathy, acknowledging the womans ability to see beyond the surface and truly understand the pain that others may be enduring.',
+         isPinned: true,
+         slug: 'she-can-see-the-pain',
+         img: Q7,
+         seoTitle: 'She can see the pain | grumpy.gr',
+         seoDescription:
+            'She perceives others pain with profound empathy, showcasing a remarkable ability to connect on an emotional level. This sensitivity allows her to understand and support those facing various struggles, offering solace and compassion.',
       },
    ],
 }
