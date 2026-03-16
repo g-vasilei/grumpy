@@ -2,13 +2,13 @@ import data from '../../../data/data'
 import Image from 'next/image'
 import ShareButtons from '../../../components/ShareButtons'
 import DownloadButtons from '../../../components/DownloadButtons'
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 
 type Props = {
    params: Promise<{ slug: string }>
 }
 
-export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
    const params = await props.params;
    // read route params
    const slug = params.slug
@@ -17,9 +17,6 @@ export async function generateMetadata(props: Props, parent: ResolvingMetadata):
    const { projects } = data
    const project = projects?.find((currentProject) => currentProject.slug === slug)
    const imgUrl = `https://grumpy.gr/imgs/quotes/quotes-${project?.id}.png`
-
-   // optionally access and extend (rather than replace) parent metadata
-   const previousImages = (await parent).openGraph?.images || []
 
    return {
       title: project?.seoTitle,
@@ -78,7 +75,7 @@ async function page(props: { params: Promise<{ slug: string }> }) {
          <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
          <div className='px-5 xl:px-0 pt-36 pb-36 w-full max-w-7xl m-auto grid grid-cols-1 md:grid-cols-2'>
             <div className='m-w-full p-5 xl:p-0'>
-               <Image src={project?.img!} priority alt={project?.title ?? 'Quote image'} />
+               <Image src={project?.img!} priority alt={project?.title ?? 'Quote image'} width={1080} height={1080} />
             </div>
             <div className='p-5 xl:p-12 text-slate-950 mt-10 md:mt-0'>
                <h2 className='text-5xl font-extrabold'>{project?.title}</h2>

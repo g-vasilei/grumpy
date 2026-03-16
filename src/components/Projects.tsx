@@ -1,9 +1,8 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { StaticImageData } from 'next/image'
 import ReactPaginate from 'react-paginate'
 import { GiSafetyPin } from 'react-icons/gi'
 
@@ -13,7 +12,7 @@ interface Projects {
    description: string
    isPinned: boolean
    slug: string
-   img: StaticImageData
+   img: string
    seoTitle: string
    seoDescription: string
 }
@@ -62,7 +61,7 @@ function Projects({ projects }: { projects: Projects[] }) {
                   <Link href={`/projects/${project.slug}`} key={index}>
                      <div className='card'>
                         <div className='max-w-[400px] relative'>
-                           <Image src={project?.img} alt={project?.title} className='rounded-lg' />
+                           <Image src={project?.img} alt={project?.title} width={1080} height={1080} className='rounded-lg' />
                            {project.isPinned && (
                               <span className='absolute top-4 right-4'>
                                  <GiSafetyPin fill='#ffffff' size={18} />
