@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Suspense } from 'react'
 import './globals.css'
 import Footer from '../components/Footer'
-import dynamic from 'next/dynamic'
+import Header from '../components/Header'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 import CookieBanner from '../components/CookieBanner'
 import { Toaster } from 'react-hot-toast'
@@ -60,16 +61,13 @@ export const metadata = {
    },
 }
 
-const Header = dynamic(() => import('../components/Header'), {
-   ssr: false,
-})
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
    const id = process.env.GA_MEASUREMENT_ID
    return (
-      <html lang='en'>
-         <GoogleAnalytics GA_MEASUREMENT_ID={id!} />
-         <body className={inter.className}>
+      <html lang='en' suppressHydrationWarning>
+         <body className={inter.className} suppressHydrationWarning>
+            <Suspense><GoogleAnalytics GA_MEASUREMENT_ID={id!} /></Suspense>
             <Header />
             <main className='bg-[#F1F1F1]'>{children}</main>
             <Footer />

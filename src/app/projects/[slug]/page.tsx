@@ -5,10 +5,11 @@ import ShareButtons from '../../../components/ShareButtons'
 import type { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
-   params: { slug: string }
+   params: Promise<{ slug: string }>
 }
 
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
+   const params = await props.params;
    // read route params
    const slug = params.slug
 
@@ -49,7 +50,8 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
    }
 }
 
-function page({ params }: { params: { slug: string } }) {
+async function page(props: { params: Promise<{ slug: string }> }) {
+   const params = await props.params;
    const { projects } = data
 
    const { slug } = params

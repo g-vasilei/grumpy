@@ -15,15 +15,17 @@ function Header() {
    const [scroll, setScroll] = useState(false)
    const scrollThreshold = 200
 
-   const stickyNavbar = () => {
-      if (window?.scrollY >= 80) {
-         setScroll(true)
-      } else {
-         setScroll(false)
+   useEffect(() => {
+      const stickyNavbar = () => {
+         if (window.scrollY >= 80) {
+            setScroll(true)
+         } else {
+            setScroll(false)
+         }
       }
-   }
-
-   window?.addEventListener('scroll', stickyNavbar)
+      window.addEventListener('scroll', stickyNavbar)
+      return () => window.removeEventListener('scroll', stickyNavbar)
+   }, [])
 
    return (
       <header className={`p-5 fixed w-full z-10  ${scroll && 'backdrop-blur-sm bg-white/20'}`}>
