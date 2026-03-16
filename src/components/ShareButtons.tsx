@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import { FacebookShareButton, FacebookIcon } from 'next-share'
 import { RedditShareButton, RedditIcon } from 'next-share'
 import { TelegramShareButton, TelegramIcon } from 'next-share'
@@ -9,53 +8,37 @@ import { ViberShareButton, ViberIcon } from 'next-share'
 import { WhatsappShareButton, WhatsappIcon } from 'next-share'
 import { FacebookMessengerShareButton, FacebookMessengerIcon } from 'next-share'
 import { EmailShareButton, EmailIcon } from 'next-share'
+import { trackShare } from '../lib/gtagHelper'
 
 function ShareButtons({ slug }: { slug: string }) {
+   const url = `https://grumpy.gr/projects/${slug}`
+   const title = 'Sad and unmotivational quotes | grumpy.gr'
+
    return (
-      <div className='flex items-center gap-5 flex-wrap mt-5'>
-         <FacebookShareButton
-            url={`https://grumpy.gr/projects/${slug}`}
-            quote={'Sad and unmotivational quotes | grumpy.gr'}
-            hashtag={'#grumpy.gr'}
-         >
-            <FacebookIcon size={32} round />
+      <div className='flex items-center gap-5 flex-wrap mt-5' aria-label='Share this quote'>
+         <FacebookShareButton url={url} quote={title} hashtag={'#grumpy.gr'} onClick={() => trackShare('facebook', slug)}>
+            <FacebookIcon size={32} round aria-label='Share on Facebook' />
          </FacebookShareButton>
-         <TwitterShareButton
-            url={`https://grumpy.gr/projects/${slug}`}
-            title={`Sad and unmotivational quotes | grumpy.gr`}
-         >
-            <TwitterIcon size={32} round />
+         <TwitterShareButton url={url} title={title} onClick={() => trackShare('twitter', slug)}>
+            <TwitterIcon size={32} round aria-label='Share on Twitter' />
          </TwitterShareButton>
-         <RedditShareButton
-            url={`https://grumpy.gr/projects/${slug}`}
-            title={`Sad and unmotivational quotes | grumpy.gr`}
-         >
-            <RedditIcon size={32} round />
+         <RedditShareButton url={url} title={title} onClick={() => trackShare('reddit', slug)}>
+            <RedditIcon size={32} round aria-label='Share on Reddit' />
          </RedditShareButton>
-         <TelegramShareButton
-            url={`https://grumpy.gr/projects/${slug}`}
-            title={`Sad and unmotivational quotes | grumpy.gr`}
-         >
-            <TelegramIcon size={32} round />
+         <TelegramShareButton url={url} title={title} onClick={() => trackShare('telegram', slug)}>
+            <TelegramIcon size={32} round aria-label='Share on Telegram' />
          </TelegramShareButton>
-         <ViberShareButton
-            url={`https://grumpy.gr/projects/${slug}`}
-            title={`Sad and unmotivational quotes | grumpy.gr`}
-         >
-            <ViberIcon size={32} round />
+         <ViberShareButton url={url} title={title} onClick={() => trackShare('viber', slug)}>
+            <ViberIcon size={32} round aria-label='Share on Viber' />
          </ViberShareButton>
-         <WhatsappShareButton
-            url={`https://grumpy.gr/projects/${slug}`}
-            title={`Sad and unmotivational quotes | grumpy.gr`}
-            separator=':: '
-         >
-            <WhatsappIcon size={32} round />
+         <WhatsappShareButton url={url} title={title} separator=':: ' onClick={() => trackShare('whatsapp', slug)}>
+            <WhatsappIcon size={32} round aria-label='Share on WhatsApp' />
          </WhatsappShareButton>
-         <FacebookMessengerShareButton url={`https://grumpy.gr/projects/${slug}`} appId={''}>
-            <FacebookMessengerIcon size={32} round />
+         <FacebookMessengerShareButton url={url} appId={''} onClick={() => trackShare('messenger', slug)}>
+            <FacebookMessengerIcon size={32} round aria-label='Share on Messenger' />
          </FacebookMessengerShareButton>
-         <EmailShareButton url={`https://grumpy.gr/projects/${slug}`} subject={'Next Share'} body='body'>
-            <EmailIcon size={32} round />
+         <EmailShareButton url={url} subject={title} body='Check out this quote on grumpy.gr' onClick={() => trackShare('email', slug)}>
+            <EmailIcon size={32} round aria-label='Share via Email' />
          </EmailShareButton>
       </div>
    )

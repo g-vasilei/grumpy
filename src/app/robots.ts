@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
          allow: '/',
          disallow: '/private/',
       },
-      sitemap: 'https://grumpy/sitemap.xml',
+      sitemap: 'https://grumpy.gr/sitemap.xml',
    }
 }

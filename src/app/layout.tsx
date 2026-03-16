@@ -5,6 +5,7 @@ import './globals.css'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import GoogleAnalytics from '../components/GoogleAnalytics'
+import GoogleTagManager from '../components/GoogleTagManager'
 import CookieBanner from '../components/CookieBanner'
 import { Toaster } from 'react-hot-toast'
 
@@ -64,10 +65,12 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
    const id = process.env.GA_MEASUREMENT_ID
+   const gtmId = process.env.GTM_ID
    return (
       <html lang='en' suppressHydrationWarning>
          <body className={inter.className} suppressHydrationWarning>
             <Suspense><GoogleAnalytics GA_MEASUREMENT_ID={id!} /></Suspense>
+            {gtmId && <GoogleTagManager GTM_ID={gtmId} />}
             <Header />
             <main className='bg-[#F1F1F1]'>{children}</main>
             <Footer />

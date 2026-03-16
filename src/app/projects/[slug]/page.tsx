@@ -1,7 +1,7 @@
-import React from 'react'
 import data from '../../../data/data'
 import Image from 'next/image'
 import ShareButtons from '../../../components/ShareButtons'
+import DownloadButtons from '../../../components/DownloadButtons'
 import type { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
@@ -57,33 +57,34 @@ async function page(props: { params: Promise<{ slug: string }> }) {
    const { slug } = params
 
    const project = projects?.find((currentProject) => currentProject.slug === slug)
+   const imgUrl = `https://grumpy.gr/imgs/quotes/quotes-${project?.id}.png`
+
+   const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: project?.seoTitle,
+      description: project?.seoDescription,
+      image: imgUrl,
+      url: `https://grumpy.gr/projects/${slug}`,
+      publisher: {
+         '@type': 'Organization',
+         name: 'grumpy.gr',
+         url: 'https://grumpy.gr',
+      },
+   }
 
    return (
       <>
+         <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
          <div className='px-5 xl:px-0 pt-36 pb-36 w-full max-w-7xl m-auto grid grid-cols-1 md:grid-cols-2'>
             <div className='m-w-full p-5 xl:p-0'>
-               <Image src={project?.img!} priority alt='Project Image' />
+               <Image src={project?.img!} priority alt={project?.title ?? 'Quote image'} />
             </div>
             <div className='p-5 xl:p-12 text-slate-950 mt-10 md:mt-0'>
                <h2 className='text-5xl font-extrabold'>{project?.title}</h2>
                <p className='text-lg mt-5 font-medium'>{project?.description}</p>
                <ShareButtons slug={slug} />
-               <div className='mt-12 flex flex-col gap-5'>
-                  <a
-                     href={`/imgs/quotes/quotes-${project?.id}.png`}
-                     download
-                     className='border-2 border-main-color rounded-xl px-3 py-2 text-xl font-semibold w-full  text-center'
-                  >
-                     Download Image
-                  </a>
-                  <a
-                     href={`/imgs/story/i-${project?.id}.png`}
-                     download
-                     className='border-2 bg-main-color text-white rounded-xl px-[18px] py-[10px] text-xl font-semibold text-center'
-                  >
-                     Download Insta Story
-                  </a>
-               </div>
+               <DownloadButtons id={project?.id!} slug={slug} />
             </div>
          </div>
       </>
