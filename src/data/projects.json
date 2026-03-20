@@ -68,5 +68,15 @@
     "img": "/imgs/quotes/quotes-7.png",
     "seoTitle": "She can see the pain | grumpy.gr",
     "seoDescription": "She perceives others pain with profound empathy, showcasing a remarkable ability to connect on an emotional level."
+  },
+  {
+    "id": 8,
+    "title": "Nobody really cares",
+    "description": "A reflection on how people often overlook those around them until they are gone. This quote captures the quiet heartbreak of feeling invisible while still present.",
+    "isPinned": false,
+    "slug": "nobody-really-cares",
+    "img": "/imgs/quotes/quotes-8.png",
+    "seoTitle": "Nobody really cares until it's too late | grumpy.gr",
+    "seoDescription": "A reflection on feeling invisible and overlooked — until it is too late."
   }
 ]
