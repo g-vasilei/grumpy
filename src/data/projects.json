@@ -78,5 +78,15 @@
     "img": "/imgs/quotes/quotes-8.png",
     "seoTitle": "Nobody really cares until it's too late | grumpy.gr",
     "seoDescription": "A reflection on feeling invisible and overlooked — until it is too late."
+  },
+  {
+    "id": 9,
+    "title": "I smile so they don't ask questions",
+    "description": "The quiet armor we wear every day. Behind every smile can be a wall built to keep people from looking too close.",
+    "isPinned": false,
+    "slug": "i-smile-so-they-dont-ask",
+    "img": "/imgs/quotes/quotes-9.png",
+    "seoTitle": "I smile so they don't ask questions | grumpy.gr",
+    "seoDescription": "Behind every smile can be a wall built to keep people from looking too close."
   }
 ]
