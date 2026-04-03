@@ -88,5 +88,15 @@
     "img": "/imgs/quotes/quotes-9.png",
     "seoTitle": "I smile so they don't ask questions | grumpy.gr",
     "seoDescription": "Behind every smile can be a wall built to keep people from looking too close."
+  },
+  {
+    "id": 10,
+    "title": "I'm fine is the biggest lie",
+    "description": "Two words that carry the weight of the world. I'm fine has become the universal language of people who are anything but.",
+    "isPinned": false,
+    "slug": "im-fine-is-the-biggest-lie",
+    "img": "/imgs/quotes/quotes-10.png",
+    "seoTitle": "I'm fine is the biggest lie | grumpy.gr",
+    "seoDescription": "Two words that carry the weight of the world."
   }
 ]
